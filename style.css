@@ -1,0 +1,79 @@
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc, #ffcc00);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .jessie {
+      font-size: 6rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ffff00;
+      animation: bounceSpin 3s infinite linear;
+      padding: 1rem 2rem;
+      border: 5px dashed #fff;
+      border-radius: 30px;
+      transform-origin: center;
+    }
+
+    @keyframes bounceSpin {
+      0% {
+        transform: scale(1) rotate(0deg);
+      }
+      25% {
+        transform: scale(1.2) rotate(90deg);
+      }
+      50% {
+        transform: scale(1) rotate(180deg);
+      }
+      75% {
+        transform: scale(1.2) rotate(270deg);
+      }
+      100% {
+        transform: scale(1) rotate(360deg);
+      }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: red;
+      animation: fall 5s infinite ease-in;
+      opacity: 0.7;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+
+    /* Generate wild random confetti */
+    .confetti:nth-child(1) {left: 10%; animation-delay: 0s;}
+    .confetti:nth-child(2) {left: 20%; background: yellow; animation-delay: 0.5s;}
+    .confetti:nth-child(3) {left: 30%; background: lime; animation-delay: 1s;}
+    .confetti:nth-child(4) {left: 40%; background: cyan; animation-delay: 1.5s;}
+    .confetti:nth-child(5) {left: 50%; background: magenta; animation-delay: 2s;}
+    .confetti:nth-child(6) {left: 60%; background: orange; animation-delay: 2.5s;}
+    .confetti:nth-child(7) {left: 70%; background: pink; animation-delay: 3s;}
+    .confetti:nth-child(8) {left: 80%; background: lightgreen; animation-delay: 3.5s;}
+    .confetti:nth-child(9) {left: 90%; background: lightblue; animation-delay: 4s;}
+    .confetti:nth-child(10) {left: 100%; background: gold; animation-delay: 4.5s;}
